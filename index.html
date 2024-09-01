@@ -1,0 +1,108 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Precios</title>
+</head>
+<body>
+    <h1>Calculadora de Precios de Productos</h1>
+    
+    <h2>Entradas de Datos</h2>
+    <label for="precioJean">Precio Jean (m²):</label>
+    <input type="number" id="precioJean" value="1000"><br>
+    
+    <label for="precioEcocuero">Precio Ecocuero (m²):</label>
+    <input type="number" id="precioEcocuero" value="1600"><br>
+    
+    <label for="precioLona">Precio Lona (m²):</label>
+    <input type="number" id="precioLona" value="1400"><br>
+    
+    <label for="precioEntretela">Precio Entretela (m²):</label>
+    <input type="number" id="precioEntretela" value="500"><br>
+    
+    <label for="precioAcetato">Precio Acetato (m²):</label>
+    <input type="number" id="precioAcetato" value="500"><br>
+    
+    <label for="precioHilo">Precio Hilo (m²):</label>
+    <input type="number" id="precioHilo" value="100"><br>
+    
+    <label for="costoManoObra">Costo Mano de Obra (m²):</label>
+    <input type="number" id="costoManoObra" value="1000"><br>
+    
+    <h2>Recetas de Productos</h2>
+    <button onclick="calcularPrecios()">Calcular Precios</button>
+    
+    <h2>Resultados</h2>
+    <div id="resultados"></div>
+
+    <h2>Editar Recetas</h2>
+    <label for="producto">Seleccionar Producto:</label>
+    <select id="producto" onchange="cargarReceta()">
+        <option value="">--Seleccionar--</option>
+        <option value="Set matero">Set matero</option>
+        <option value="Bolso playero">Bolso playero</option>
+        <option value="Neceser">Neceser</option>
+        <option value="Cartuchera">Cartuchera</option>
+    </select><br>
+
+    <label for="recetaLona">Lona (m²):</label>
+    <input type="number" id="recetaLona" value="0"><br>
+
+    <label for="recetaAcetato">Acetato (m²):</label>
+    <input type="number" id="recetaAcetato" value="0"><br>
+
+    <label for="recetaCierre">Cierre (m²):</label>
+    <input type="number" id="recetaCierre" value="0"><br>
+
+    <label for="recetaHilo">Hilo (m²):</label>
+    <input type="number" id="recetaHilo" value="0"><br>
+
+    <label for="recetaEcocuero">Ecocuero (m²):</label>
+    <input type="number" id="recetaEcocuero" value="0"><br>
+
+    <label for="recetaEntretela">Entretela (m²):</label>
+    <input type="number" id="recetaEntretela" value="0"><br>
+
+    <label for="recetaJean">Jean (m²):</label>
+    <input type="number" id="recetaJean" value="0"><br>
+
+    <label for="recetaManoObra">Mano de Obra (m²):</label>
+    <input type="number" id="recetaManoObra" value="0"><br>
+
+    <button onclick="guardarReceta()">Guardar Receta</button>
+
+    <h2>Agregar Nueva Tela</h2>
+    <label for="nuevoNombreTela">Nombre de la Tela:</label>
+    <input type="text" id="nuevoNombreTela"><br>
+
+    <label for="nuevoPrecioTela">Precio por m²:</label>
+    <input type="number" id="nuevoPrecioTela" value="0"><br>
+
+    <button onclick="agregarTela()">Agregar Tela</button>
+
+    <h2>Agregar Nueva Receta</h2>
+    <label for="nuevoProducto">Nombre del Producto:</label>
+    <input type="text" id="nuevoProducto"><br>
+
+    <label for="nuevaLona">Lona (m²):</label>
+    <input type="number" id="nuevaLona" value="0"><br>
+
+    <label for="nuevoAcetato">Acetato (m²):</label>
+    <input type="number" id="nuevoAcetato" value="0"><br>
+
+    <label for="nuevoCierre">Cierre (m²):</label>
+    <input type="number" id="nuevoCierre" value="0"><br>
+
+    <label for="nuevoHilo">Hilo (m²):</label>
+    <input type="number" id="nuevoHilo" value="0"><br>
+
+    <label for="nuevaManoObra">Mano de Obra (m²):</label>
+    <input type="number" id="nuevaManoObra" value="0"><br>
+
+    <button onclick="agregarReceta()">Agregar Receta</button>
+
+    <script src="app.js"></script>
+</body>
+</html>
